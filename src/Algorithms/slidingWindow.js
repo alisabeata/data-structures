@@ -8,7 +8,7 @@ const initSlidingWindow = () => {
 
     for (let end = 0; end < arr.length; end++) {
       sum += arr[end]
-
+      
       if (end >= k - 1) {
         // add the average of the current window to averages[]
         averages.push(sum / k)
