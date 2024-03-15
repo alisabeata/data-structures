@@ -1,4 +1,67 @@
 const init = () => {
+  class Class1 {
+    constructor() {
+      this.name = 'Name'
+    }
+
+    getName() {
+      return this.name
+    }
+  }
+
+  class Class2 extends Class1 {
+    constructor() {
+      super()
+      this.name = 'Bob'
+    }
+
+    print() {
+      console.log(super.getName() + '111')
+    }
+  }
+
+  const instance = new Class2()
+  instance.print()
+
+  return
+  // Parent constructor function
+  function Animal(name) {
+    this.name = name
+  }
+
+  // Method for Animal prototype
+  Animal.prototype.speak = function () {
+    console.log(this.name + ' makes a noise.')
+  }
+
+  Animal.prototype.somemethod = function () {
+    console.log(this.name + ' somemethod')
+  }
+
+  // Child constructor function inheriting from Animal
+  function Dog(name) {
+    Animal.call(this, name) // call the parent constructor
+  }
+
+  // Inherit Animal prototype
+  Dog.prototype = Object.create(Animal.prototype)
+  // Obj.prototype.constructor is the constructor data property
+  // of an Object instance returns a reference to the constructor
+  // function that created the instance object.
+  Dog.prototype.constructor = Dog
+
+  console.log(Dog.prototype.constructor)
+
+  // Method for Dog prototype
+  Dog.prototype.speak = function () {
+    console.log(this.name + ' barks.')
+  }
+
+  // Creating instances
+  var dog = new Dog('Spot')
+  dog.somemethod() // Output: Spot barks.
+
+  return
   var p1 = new Promise((resolve, reject) => {
     setTimeout(resolve, 1000, 'one')
   })

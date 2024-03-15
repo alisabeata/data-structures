@@ -1,3 +1,5 @@
+// Binary Search
+
 const initBinarySearch = () => {
   function binarySearch(arr, target) {
     let left = 0

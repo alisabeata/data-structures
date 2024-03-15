@@ -6,6 +6,7 @@ import { initTree } from './DataStructures/TreeNoNBinary'
 import { initBinaryTree } from './DataStructures/TreeBinary'
 import { initGraph } from './DataStructures/Graph'
 import { initBinarySearch } from './Algorithms/binarySearch'
+import { initSlidingWindow } from './Algorithms/slidingWindow'
 import { init } from './init'
 
 // initLinkedList()
@@ -15,5 +16,6 @@ import { init } from './init'
 // initTree()
 // initBinaryTree()
 // initGraph()
-// initBinarySearch
- init()
+// initBinarySearch()
+ initSlidingWindow()
+// init()
