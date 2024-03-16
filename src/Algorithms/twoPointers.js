@@ -39,6 +39,28 @@ const initTwoPointers = () => {
   console.log(findSumOfPair([1, 6, 8, 9, 10], 14)) // [6, 8]
   console.log(findSumOfPair([1, 3, 4, 6, 8, 10], 12)) // [4, 8]
   console.log(findSumOfPair([1, 2, 3, 4, 5], 10)) // null
+
+  // isPalindrome
+  function isPalindrome(s) {
+    const str = s.toLowerCase().replace(/[^a-z0-9]/g, '')
+    let left = 0
+    let right = str.length - 1
+
+    while (left < right) {
+      if (str[left] !== str[right]) {
+        return false
+      }
+
+      right--
+      left++
+    }
+
+    return true
+  }
+
+  console.log(isPalindrome('A man, a plan, a canal: Panama')) // true
+  console.log(isPalindrome('race a car')) // false
+  console.log(isPalindrome(' ')) // true
 }
 
 export { initTwoPointers }
