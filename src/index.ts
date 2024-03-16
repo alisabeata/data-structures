@@ -7,6 +7,7 @@ import { initBinaryTree } from './DataStructures/TreeBinary'
 import { initGraph } from './DataStructures/Graph'
 import { initBinarySearch } from './Algorithms/binarySearch'
 import { initSlidingWindow } from './Algorithms/slidingWindow'
+import { initTwoPointers } from './Algorithms/twoPointers'
 import { init } from './init'
 
 // initLinkedList()
@@ -17,5 +18,6 @@ import { init } from './init'
 // initBinaryTree()
 // initGraph()
 // initBinarySearch()
- initSlidingWindow()
+// initSlidingWindow()
+initTwoPointers()
 // init()
