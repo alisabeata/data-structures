@@ -8,6 +8,7 @@ import { initGraph } from './DataStructures/Graph'
 import { initBinarySearch } from './Algorithms/binarySearch'
 import { initSlidingWindow } from './Algorithms/slidingWindow'
 import { initTwoPointers } from './Algorithms/twoPointers'
+import { initSlowAndFastPointers } from './Algorithms/slowAndFastPointers'
 import { init } from './init'
 
 // initLinkedList()
@@ -19,5 +20,6 @@ import { init } from './init'
 // initGraph()
 // initBinarySearch()
 // initSlidingWindow()
-initTwoPointers()
+// initTwoPointers()
+initSlowAndFastPointers()
 // init()
