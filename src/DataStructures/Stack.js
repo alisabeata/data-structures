@@ -1,38 +1,30 @@
 const initStack = () => {
   class Stack {
     constructor() {
-        this.items = []
+      this.items = []
     }
 
     push(element) {
-        this.items.push(element)
+      this.items.push(element)
     }
 
     pop() {
-        if (this.isEmpty()) {
-            console.log('Underflow')
-            return
-        }
-        return this.items.pop()
+      if (this.items.length === 0) {
+        console.log('Underflow')
+        return
+      }
+      return this.items.pop()
     }
 
     peek() {
-        return this.items[this.items.length - 1]
-    }
-
-    isEmpty() {
-        return this.items.length === 0
-    }
-
-    size() {
-        return this.items.length
+      return this.items[this.items.length - 1]
     }
 
     print() {
-        console.log(this.items.join(' '))
+      console.log(this.items.join(' '))
     }
   }
-  
+
   // Example usage
   const stack = new Stack()
 

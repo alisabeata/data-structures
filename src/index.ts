@@ -1,6 +1,6 @@
-import { initLinkedList } from './DataStructures/LinkedList'
 import { initStack } from './DataStructures/Stack'
 import { initQueue } from './DataStructures/Queue'
+import { initLinkedList } from './DataStructures/LinkedList'
 import { initDoublyLinkedList } from './DataStructures/DoublyLinkedList'
 import { initTree } from './DataStructures/TreeNoNBinary'
 import { initBinaryTree } from './DataStructures/TreeBinary'
@@ -9,11 +9,12 @@ import { initBinarySearch } from './Algorithms/binarySearch'
 import { initSlidingWindow } from './Algorithms/slidingWindow'
 import { initTwoPointers } from './Algorithms/twoPointers'
 import { initSlowAndFastPointers } from './Algorithms/slowAndFastPointers'
+import { initMergeIntervals } from './Algorithms/mergeIntervals'
 import { init } from './init'
 
-// initLinkedList()
 // initStack()
 // initQueue()
+// initLinkedList()
 // initDoublyLinkedList()
 // initTree()
 // initBinaryTree()
@@ -21,5 +22,6 @@ import { init } from './init'
 // initBinarySearch()
 // initSlidingWindow()
 // initTwoPointers()
-initSlowAndFastPointers()
+// initSlowAndFastPointers()
+initMergeIntervals()
 // init()

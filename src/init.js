@@ -1,4 +1,5 @@
 const init = () => {
+  return
   class Class1 {
     constructor() {
       this.name = 'Name'

@@ -9,29 +9,15 @@ const initQueue = () => {
     }
 
     dequeue() {
-      if (this.isEmpty()) {
-        console.log('Undeflow')
+      if (this.items.length === 0) {
+        console.log('Underflow')
         return
       }
-
       return this.items.shift()
     }
 
     front() {
-      if (this.isEmpty()) {
-        console.log('Is Empty')
-        return
-      }
-
       return this.items[0]
-    }
-
-    isEmpty() {
-      return this.items.length === 0
-    }
-
-    size() {
-      return this.items.length
     }
 
     print() {

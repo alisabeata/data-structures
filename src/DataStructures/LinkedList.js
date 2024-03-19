@@ -1,31 +1,30 @@
 const initLinkedList = () => {
   class Node {
-    constructor (data) {
+    constructor(data) {
       this.data = data
       this.next = null
     }
   }
 
   class LinkedList {
-    constructor () {
+    constructor() {
       this.head = null
       this.size = 0
     }
 
-    insertFirst (data) {
-      this.head = new Node(data)
+    insertFirst(data) {
+      this.head = new Node(data, this.head)
       this.size++
     }
 
-    insertLast (data) {
-      if (!this.head) {
-        this.insertFirst(data)
-        return
-      }
-
+    insertLast(data) {
+      const newNode = new Node(data)
       this.size++
 
-      const newNode = new Node(data)
+      if (!this.head) {
+        this.head = newNode
+        return
+      }
 
       let current = this.head
 
@@ -36,7 +35,7 @@ const initLinkedList = () => {
       current.next = newNode
     }
 
-    insertAt (position, data) {
+    insertAt(position, data) {
       if (position < 0 || position > this.size) {
         console.log('Invalid position')
         return
@@ -47,9 +46,9 @@ const initLinkedList = () => {
         return
       }
 
-      this.size++
-
       const newNode = new Node(data)
+
+      this.size++
 
       let current = this.head
       let prev = null
@@ -65,13 +64,18 @@ const initLinkedList = () => {
       newNode.next = current
     }
 
-    removeAt (position) {
+    removeAt(position) {
       if (position < 0 || position > this.size) {
         console.log('Invalid position')
         return
       }
 
       this.size--
+
+      if (position === 0) {
+        this.head = this.head.next
+        return
+      }
 
       let current = this.head
       let prev = null
@@ -86,7 +90,7 @@ const initLinkedList = () => {
       prev.next = current.next
     }
 
-    getAt (position) {
+    getAt(position) {
       if (position < 0 || position > this.size) {
         console.log('Invalid position')
         return
@@ -103,7 +107,7 @@ const initLinkedList = () => {
       return current.data
     }
 
-    print () {
+    print() {
       let current = this.head
 
       while (current) {

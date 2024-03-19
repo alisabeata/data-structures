@@ -1,4 +1,10 @@
 const initDoublyLinkedList = () => {
+  class Node {
+    constructor (data) {}
+  }
+
+  class DoublyLinkedList {}
+
   return
   // Example usage:
   const doublyLinkedList = new DoublyLinkedList()
